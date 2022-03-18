@@ -194,11 +194,8 @@ input, select, textarea {
 			}
 
 		}
-
 	h2, h3, h4, h5, h6 {
 		font-weight: 900;
-		line-height: 1.5;
-		margin: 0 0 2em 0;
 		text-transform: uppercase;
 		letter-spacing: 0.35em;
 	}
@@ -2040,15 +2037,16 @@ input, select, textarea {
 /* Icons */
 
 	ul.icons {
+		color: #eeff00;
 		cursor: default;
 		list-style: none;
-		padding-left: 0;
+		padding-left: 1;
 		margin: -1em 0 2em -1em;
 	}
 
 		ul.icons li {
-			display: inline-block;
-			padding: 1em 0 0 1em;
+			display: block;
+			padding: 1em 0 0 3em;
 		}
 
 /* Form */
@@ -2063,6 +2061,8 @@ input, select, textarea {
 		}
 
 		form > .fields {
+			color: #000000;
+			display: inline-block;
 			display: -moz-flex;
 			display: -webkit-flex;
 			display: -ms-flex;
@@ -2462,7 +2462,7 @@ input, select, textarea {
 		font-size: 0.8em;
 		font-weight: 900;
 		height: 3.5em;
-		letter-spacing: 0.35em;
+		letter-spacing: 0.1em;
 		line-height: 3.45em;
 		overflow: hidden;
 		padding: 0 1.25em 0 1.6em;
@@ -2494,7 +2494,7 @@ input, select, textarea {
 		input[type="button"]:hover,
 		button:hover,
 		.button:hover {
-			color: #f2849e !important;
+			color: #00ff0d !important;
 			box-shadow: inset 0 0 0 2px #f2849e;
 		}
 
@@ -2503,7 +2503,7 @@ input, select, textarea {
 		input[type="button"]:active,
 		button:active,
 		.button:active {
-			background-color: rgba(242, 132, 158, 0.1);
+			background-color: #ff0707;
 		}
 
 		input[type="submit"].small,
@@ -2528,7 +2528,7 @@ input, select, textarea {
 		button.primary,
 		.button.primary {
 			box-shadow: none;
-			background-color: #585858;
+			background-color: #b34c4c;
 			color: #ffffff !important;
 		}
 
@@ -2537,7 +2537,7 @@ input, select, textarea {
 			input[type="button"].primary:hover,
 			button.primary:hover,
 			.button.primary:hover {
-				background-color: #f2849e;
+				background-color: #ff0000;
 			}
 
 			input[type="submit"].primary:active,
@@ -2973,6 +2973,8 @@ input, select, textarea {
 	}
 
 	#menu {
+		width: 13em;
+		background: #9ad67e;
 		-moz-transform: translateX(22em);
 		-webkit-transform: translateX(22em);
 		-ms-transform: translateX(22em);
@@ -3023,6 +3025,8 @@ input, select, textarea {
 				}
 
 					#menu > .inner > ul > li a {
+						line-height: 0.5;
+						color: #020202;
 						display: block;
 						padding: 1em 0;
 						line-height: 1.5;
@@ -3163,10 +3167,17 @@ input, select, textarea {
 		}
 
 /* Footer */
-
 	#footer {
-		padding: 5em 0 6em 0 ;
-		background-color: #f6f6f6;
+		padding: 1em 0 0 0 ;
+		background-color: #59bfe7;
+	}
+	
+	#footer > .inner h2{
+		font-weight: 700;
+		line-height: 0.3;
+		margin: 0 0 0.9em 0;
+		text-transform: none;
+		letter-spacing: 0.02em;
 	}
 
 		#footer > .inner {
