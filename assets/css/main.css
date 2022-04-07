@@ -1840,8 +1840,8 @@ input, select, textarea {
 			background-color: transparent;
 			border: solid 1px #c9c9c9;
 			border-radius: 4px;
-			width: 2.65em;
-			height: 2.65em;
+			width: 3em;
+			height: 3em;
 			display: inline-block;
 			text-align: center;
 			line-height: 2.65em;
@@ -1849,7 +1849,7 @@ input, select, textarea {
 		}
 
 			.icon.style2:before {
-				font-size: 1.1em;
+				font-size: 1.8em;
 			}
 
 			.icon.style2:hover {
@@ -2041,13 +2041,20 @@ input, select, textarea {
 		cursor: default;
 		list-style: none;
 		padding-left: 1;
-		margin: -1em 0 2em -1em;
+		margin: 1em 0 2em -1em;
 	}
 
 		ul.icons li {
 			display: block;
 			padding: 1em 0 0 3em;
 		}
+
+	.icons {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		gap: 15px;
+	}
 
 /* Form */
 
@@ -2072,10 +2079,11 @@ input, select, textarea {
 			-ms-flex-wrap: wrap;
 			flex-wrap: wrap;
 			width: calc(100% + 3em);
-			margin: -1.5em 0 2em -1.5em;
+			margin: -1.3em 0 2em -1.5em;
 		}
 
 			form > .fields > .field {
+				margin-top: 0em;
 				-moz-flex-grow: 0;
 				-webkit-flex-grow: 0;
 				-ms-flex-grow: 0;
@@ -2528,7 +2536,7 @@ input, select, textarea {
 		button.primary,
 		.button.primary {
 			box-shadow: none;
-			background-color: #b34c4c;
+			background-color: #bd4949;
 			color: #ffffff !important;
 		}
 
@@ -2537,7 +2545,7 @@ input, select, textarea {
 			input[type="button"].primary:hover,
 			button.primary:hover,
 			.button.primary:hover {
-				background-color: #ff0000;
+				background-color: #f76060;
 			}
 
 			input[type="submit"].primary:active,
@@ -3178,6 +3186,7 @@ input, select, textarea {
 		margin: 0 0 0.9em 0;
 		text-transform: none;
 		letter-spacing: 0.02em;
+		font-size: 1.3em;
 	}
 
 		#footer > .inner {
@@ -3212,10 +3221,11 @@ input, select, textarea {
 			#footer > .inner .copyright {
 				width: 100%;
 				padding: 0;
-				margin-top: 5em;
+				margin-top: 3em;
+				margin-bottom: 0.3em;
 				list-style: none;
-				font-size: 0.8em;
-				color: rgba(88, 88, 88, 0.5);
+				font-size: 1em;
+				color: rgba(0, 0, 0, 0.5);
 			}
 
 				#footer > .inner .copyright a {
@@ -3239,7 +3249,7 @@ input, select, textarea {
 		@media screen and (max-width: 1280px) {
 
 			#footer {
-				padding: 5em 0 3em 0 ;
+				padding: 2em 0 0em 0 ;
 			}
 
 				#footer > .inner section:nth-child(1) {
