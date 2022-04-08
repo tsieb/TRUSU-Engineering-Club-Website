@@ -11,7 +11,47 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			.collapsible {
+				background-color:rgba(13, 45, 226, 0.774);
+				color:rgb(255, 255, 255);
+				cursor: pointer;
+				padding: 0px;
+				width: 100%;
+				border: none;
+				text-align: middle;
+				outline: none;
+				font-size: 20px;
+			}
+
+			.active, .collapsible:hover{
+				background-color: rgb(73, 95, 223);
+			}
+			
+			.collapsible:after {
+				content: '\002B';
+				color: rgb(253, 253, 253);
+				font-weight: bold;
+				float: right;
+				margin-left: 5px;
+			}
+
+			.active:after{
+				content: "\2212";
+			}
+
+			.content{
+				padding: 0 18px;
+				max-height: 0;
+				overflow: hidden;
+				transition: max-height 0.2s ease-out;
+				background-color: #f1f1f1;
+			}
+
+
+		</style>
 	</head>
+
 	<body class="is-preload">
 		<!-- Wrapper -->
 			<div id="wrapper">
@@ -52,49 +92,98 @@
 						<div class="inner">
 							<h1>FAQ</h1>
 							<span class="image main"><img src="images/pic13.jpg" alt="" /></span>
+
 							<ol>
-								<strong><li>Q1</strong>
-									<ul>A1</ul>
+								<li>
+									<button class="collapsible">Q1</button>
+									<div class="content">
+										<p>A1</p>
+									</div>
 								</li><br>
 							
-								<strong><li>Q2</strong>
-									<ul>A2</ul>
+								<li>
+									<button class="collapsible">Q2</button>
+									<div class="content">
+										<p>A2</p>
+									</div>
 								</li><br>
 							
-								<strong><li>Q3</strong>
-									<ul>A3</ul>
+								<li>
+									<button class="collapsible">Q3</button>
+									<div class="content">
+										<p>A3</p>
+									</div>
 								</li><br>
 							
-								<strong><li>Q4</strong>
-									<ul>A4</ul>
+								<li>
+									<button class="collapsible">Q4</button>
+									<div class="content">
+										<p>A4</p>
+									</div>
 								</li><br>
 							
-								<strong><li>Q5</strong>
-									<ul>A5</ul>
+								<li>
+									<button class="collapsible">Q5</button>
+									<div class="content">
+										<p>A5</p>
+									</div>
 								</li><br>
 							
-								<strong><li>Q6</strong>
-									<ul>A6</ul>
+								<li>
+									<button class="collapsible">Q6</button>
+									<div class="content">
+										<p>A6</p>
+									</div>
 								</li><br>
 							
-								<strong><li>Q7</strong>
-									<ul>A7</ul>
+								<li>
+									<button class="collapsible">Q7</button>
+									<div class="content">
+										<p>A7</p>
+									</div>
 								</li><br>
 							
-								<strong><li>Q8</strong>
-									<ul>A8</ul>
+								<li>
+									<button class="collapsible">Q8</button>
+									<div class="content">
+										<p>A8</p>
+									</div>
 								</li><br>
 							
-								<strong><li>Q9</strong>
-									<ul>A9</ul>
+								<li>
+									<button class="collapsible">Q9</button>
+									<div class="content">
+										<p>A9</p>
+									</div>
 								</li><br>
 							
-								<strong><li>Q10</strong>
-									<ul>A10</ul>
+								<li>
+									<button class="collapsible">Q10</button>
+									<div class="content">
+										<p>A10</p>
+									</div>
 								</li><br>
 							</ol>
 						</div>
 					</div>
+
+					<script>
+						var coll = document.getElementsByClassName("collapsible");
+						var i;
+
+						for(i = 0; i < coll.length; i++) {
+							coll[i].addEventListener("click", function(){
+								this.classList.toggle("active");
+								var content = this.nextElementSibling;
+								if (content.style.maxHeight){
+									content.style.maxHeight = null;
+								}
+								else{
+									content.style.maxHeight = content.scrollHeight + "px";
+								}
+							});
+						}
+					</script>
 
 				<!-- Footer -->
 					<footer id="footer">
